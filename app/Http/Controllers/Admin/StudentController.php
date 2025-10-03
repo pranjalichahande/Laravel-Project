@@ -12,6 +12,7 @@ class StudentController extends Controller
     {
         $students = User::where('role', 'student')->with('documents')->get();
         return view('admin.students.index', compact('students'));
+        
     }
 
     public function show($id)
